@@ -1,0 +1,36 @@
+<script>
+    let result=function(score)
+    {
+        return new Promise(function(resolve,reject)
+    {
+        document.write("cal results");
+       if(score>50)
+       resolve("you passed");
+    else
+    reject("you failed");
+    })
+    }
+    let grade=function(response)
+    {
+        return new Promise(function(resolve,reject)
+    {
+        document.write("cal grade");
+        resolve("your grade is A"+response);
+    })
+    }
+    async function calc(){
+        try{
+            const respo=await result(90);
+            document.write("results received");
+            const finalgrade= await grade(respo);
+            document.write(finalgrade);
+
+
+        }
+        catch(err)
+        {
+            document.write(err);
+        }
+    }
+    calc()
+</script>

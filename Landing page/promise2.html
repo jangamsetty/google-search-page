@@ -1,0 +1,33 @@
+<script>
+    let c1=function()
+    {
+        return new Promise(function(resolve,reject)
+    {
+       resolve("car has no fuel");
+    })
+    }
+    let c2=function(msg)
+    {
+        return new Promise(function(resolve,reject)
+        {
+           resolve("engine is heated"+msg);
+        })
+    }
+    let c3=function(msg)
+    {
+        return new Promise(function(resolve,reject)
+        {
+            resolve("not safe to drive"+msg);
+        })
+    }
+    c1().then(function(result)
+    {
+        return c2(result)
+    }).then(function(result){
+        return c3(result)
+    }).then(function(result)
+{
+    document.write(result)
+})
+
+</script>

@@ -1,0 +1,17 @@
+<script>
+    let car=new Promise(function(resolve,reject)
+{
+    c=false;
+    if(c)
+    resolve();
+else
+reject();
+})
+car.then(function()
+{
+    document.write("the tank i full");
+})
+.catch(function(){
+    document.write("the tank is empty");
+})
+</script>

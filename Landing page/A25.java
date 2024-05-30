@@ -2,7 +2,7 @@ package string1;
 
 import java.util.Scanner;
 
-public class A25 {
+public class Targetcount {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
